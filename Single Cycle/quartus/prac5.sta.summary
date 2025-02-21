@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 900mV 100C Model Setup 'CLK3'
+Slack : -4.596
+TNS   : -305.067
+
+Type  : Slow 900mV 100C Model Setup 'CLK4'
+Slack : -4.211
+TNS   : -7.113
+
+Type  : Slow 900mV 100C Model Setup 'CLK'
+Slack : -3.765
+TNS   : -50.723
+
+Type  : Slow 900mV 100C Model Setup 'CLK2'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Slow 900mV 100C Model Hold 'CLK2'
+Slack : 0.099
+TNS   : 0.000
+
+Type  : Slow 900mV 100C Model Hold 'CLK'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Slow 900mV 100C Model Hold 'CLK4'
+Slack : 0.512
+TNS   : 0.000
+
+Type  : Slow 900mV 100C Model Hold 'CLK3'
+Slack : 0.898
+TNS   : 0.000
+
+Type  : Slow 900mV 100C Model Minimum Pulse Width 'CLK3'
+Slack : -2.846
+TNS   : -131.483
+
+Type  : Slow 900mV 100C Model Minimum Pulse Width 'CLK'
+Slack : -2.846
+TNS   : -39.676
+
+Type  : Slow 900mV 100C Model Minimum Pulse Width 'CLK4'
+Slack : -2.846
+TNS   : -10.152
+
+Type  : Slow 900mV 100C Model Minimum Pulse Width 'CLK2'
+Slack : -2.846
+TNS   : -5.265
+
+Type  : Slow 900mV -40C Model Setup 'CLK3'
+Slack : -4.420
+TNS   : -294.243
+
+Type  : Slow 900mV -40C Model Setup 'CLK4'
+Slack : -3.997
+TNS   : -6.725
+
+Type  : Slow 900mV -40C Model Setup 'CLK'
+Slack : -3.580
+TNS   : -48.312
+
+Type  : Slow 900mV -40C Model Setup 'CLK2'
+Slack : 0.481
+TNS   : 0.000
+
+Type  : Slow 900mV -40C Model Hold 'CLK2'
+Slack : 0.056
+TNS   : 0.000
+
+Type  : Slow 900mV -40C Model Hold 'CLK'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Slow 900mV -40C Model Hold 'CLK4'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Slow 900mV -40C Model Hold 'CLK3'
+Slack : 0.870
+TNS   : 0.000
+
+Type  : Slow 900mV -40C Model Minimum Pulse Width 'CLK3'
+Slack : -2.846
+TNS   : -131.339
+
+Type  : Slow 900mV -40C Model Minimum Pulse Width 'CLK'
+Slack : -2.846
+TNS   : -39.717
+
+Type  : Slow 900mV -40C Model Minimum Pulse Width 'CLK4'
+Slack : -2.846
+TNS   : -10.106
+
+Type  : Slow 900mV -40C Model Minimum Pulse Width 'CLK2'
+Slack : -2.846
+TNS   : -5.268
+
+Type  : Fast 900mV -40C Model Setup 'CLK3'
+Slack : -1.816
+TNS   : -116.793
+
+Type  : Fast 900mV -40C Model Setup 'CLK4'
+Slack : -1.616
+TNS   : -2.377
+
+Type  : Fast 900mV -40C Model Setup 'CLK'
+Slack : -1.440
+TNS   : -18.411
+
+Type  : Fast 900mV -40C Model Setup 'CLK2'
+Slack : 0.697
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Hold 'CLK2'
+Slack : 0.028
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Hold 'CLK'
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Hold 'CLK4'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Hold 'CLK3'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Fast 900mV -40C Model Minimum Pulse Width 'CLK3'
+Slack : -2.846
+TNS   : -53.005
+
+Type  : Fast 900mV -40C Model Minimum Pulse Width 'CLK'
+Slack : -2.846
+TNS   : -18.327
+
+Type  : Fast 900mV -40C Model Minimum Pulse Width 'CLK4'
+Slack : -2.846
+TNS   : -9.427
+
+Type  : Fast 900mV -40C Model Minimum Pulse Width 'CLK2'
+Slack : -2.846
+TNS   : -4.680
+
+------------------------------------------------------------
