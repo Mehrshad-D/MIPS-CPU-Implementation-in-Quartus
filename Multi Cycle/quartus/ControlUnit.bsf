@@ -1,0 +1,127 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 232 240)
+	(text "ControlUnit" (rect 5 0 66 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 208 25 220)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Opcode[3..0]" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "Opcode[3..0]" (rect 21 27 94 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "funct[2..0]" (rect 0 0 57 14)(font "Arial" (font_size 8)))
+		(text "funct[2..0]" (rect 21 43 78 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "ready" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "ready" (rect 21 59 54 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "WriteSrc[1..0]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "WriteSrc[1..0]" (rect 118 27 195 41)(font "Arial" (font_size 8)))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "RegWrite" (rect 0 0 51 14)(font "Arial" (font_size 8)))
+		(text "RegWrite" (rect 144 43 195 57)(font "Arial" (font_size 8)))
+		(line (pt 216 48)(pt 200 48))
+	)
+	(port
+		(pt 216 64)
+		(output)
+		(text "Branch" (rect 0 0 41 14)(font "Arial" (font_size 8)))
+		(text "Branch" (rect 154 59 195 73)(font "Arial" (font_size 8)))
+		(line (pt 216 64)(pt 200 64))
+	)
+	(port
+		(pt 216 80)
+		(output)
+		(text "AluSrc[1..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "AluSrc[1..0]" (rect 128 75 195 89)(font "Arial" (font_size 8)))
+		(line (pt 216 80)(pt 200 80)(line_width 3))
+	)
+	(port
+		(pt 216 96)
+		(output)
+		(text "Jump" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "Jump" (rect 166 91 195 105)(font "Arial" (font_size 8)))
+		(line (pt 216 96)(pt 200 96))
+	)
+	(port
+		(pt 216 112)
+		(output)
+		(text "JupmToReg" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "JupmToReg" (rect 129 107 195 121)(font "Arial" (font_size 8)))
+		(line (pt 216 112)(pt 200 112))
+	)
+	(port
+		(pt 216 128)
+		(output)
+		(text "MemToReg[1..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "MemToReg[1..0]" (rect 105 123 195 137)(font "Arial" (font_size 8)))
+		(line (pt 216 128)(pt 200 128)(line_width 3))
+	)
+	(port
+		(pt 216 144)
+		(output)
+		(text "MemWrite" (rect 0 0 55 14)(font "Arial" (font_size 8)))
+		(text "MemWrite" (rect 140 139 195 153)(font "Arial" (font_size 8)))
+		(line (pt 216 144)(pt 200 144))
+	)
+	(port
+		(pt 216 160)
+		(output)
+		(text "AluOp[3..0]" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "AluOp[3..0]" (rect 132 155 195 169)(font "Arial" (font_size 8)))
+		(line (pt 216 160)(pt 200 160)(line_width 3))
+	)
+	(port
+		(pt 216 176)
+		(output)
+		(text "WriteEn" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "WriteEn" (rect 152 171 195 185)(font "Arial" (font_size 8)))
+		(line (pt 216 176)(pt 200 176))
+	)
+	(port
+		(pt 216 192)
+		(output)
+		(text "Start" (rect 0 0 27 14)(font "Arial" (font_size 8)))
+		(text "Start" (rect 168 187 195 201)(font "Arial" (font_size 8)))
+		(line (pt 216 192)(pt 200 192))
+	)
+	(drawing
+		(rectangle (rect 16 16 200 208))
+	)
+)

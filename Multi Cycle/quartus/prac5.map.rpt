@@ -1,0 +1,1408 @@
+Analysis & Synthesis report for prac5
+Mon Apr 08 22:36:10 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for memory:inst10|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block|altsyncram_g1h1:auto_generated
+ 15. Source assignments for main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component|cntr_b5k:auto_generated
+ 16. Source assignments for memory:inst8|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated
+ 17. Source assignments for memory:inst36|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated
+ 18. Parameter Settings for User Entity Instance: memory:inst10|LPM_RAM_DQ:inst2
+ 19. Parameter Settings for User Entity Instance: lpm_mux4:inst27|LPM_MUX:LPM_MUX_component
+ 20. Parameter Settings for User Entity Instance: lpm_mux4:inst26|LPM_MUX:LPM_MUX_component
+ 21. Parameter Settings for User Entity Instance: lpm_mux4:inst25|LPM_MUX:LPM_MUX_component
+ 22. Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component
+ 23. Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|lpm_mux2:inst12|LPM_MUX:LPM_MUX_component
+ 24. Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|lpm_mux1:inst11|LPM_MUX:LPM_MUX_component
+ 25. Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|lpm_mux2:inst10|LPM_MUX:LPM_MUX_component
+ 26. Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|add_circuit:inst4|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component
+ 27. Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|add_circuit:inst5|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component
+ 28. Parameter Settings for User Entity Instance: main_circuit:inst11|LPM_XOR:inst2
+ 29. Parameter Settings for User Entity Instance: main_circuit:inst11|lpm_mux3:inst36|LPM_MUX:LPM_MUX_component
+ 30. Parameter Settings for User Entity Instance: main_circuit:inst11|LPM_AND:inst3
+ 31. Parameter Settings for User Entity Instance: main_circuit:inst11|LPM_OR:inst
+ 32. Parameter Settings for User Entity Instance: main_circuit:inst11|add_circuit:inst8|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component
+ 33. Parameter Settings for User Entity Instance: main_circuit:inst11|add_circuit:inst9|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component
+ 34. Parameter Settings for User Entity Instance: RegisterFile:inst7|lpm_mux6:inst17|LPM_MUX:LPM_MUX_component
+ 35. Parameter Settings for User Entity Instance: RegisterFile:inst7|lpm_decode0:inst13|lpm_decode:LPM_DECODE_component
+ 36. Parameter Settings for User Entity Instance: RegisterFile:inst7|lpm_mux6:inst14|LPM_MUX:LPM_MUX_component
+ 37. Parameter Settings for User Entity Instance: lpm_mux1:inst9|LPM_MUX:LPM_MUX_component
+ 38. Parameter Settings for User Entity Instance: memory:inst8|LPM_RAM_DQ:inst2
+ 39. Parameter Settings for User Entity Instance: lpm_mux8:inst|LPM_MUX:LPM_MUX_component
+ 40. Parameter Settings for User Entity Instance: lpm_mux5:inst2|LPM_MUX:LPM_MUX_component
+ 41. Parameter Settings for User Entity Instance: add_circuit:inst15|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component
+ 42. Parameter Settings for User Entity Instance: add_circuit:inst16|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component
+ 43. Parameter Settings for User Entity Instance: memory:inst36|LPM_RAM_DQ:inst2
+ 44. Elapsed Time Per Partition
+ 45. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                   ;
++-----------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status       ; Successful - Mon Apr 08 22:36:10 2024      ;
+; Quartus II 64-Bit Version         ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                     ; prac5                                      ;
+; Top-level Entity Name             ; MipsDataPath                               ;
+; Family                            ; Arria II GX                                ;
+; Logic utilization                 ; N/A                                        ;
+;     Combinational ALUTs           ; 214                                        ;
+;     Memory ALUTs                  ; 0                                          ;
+;     Dedicated logic registers     ; 103                                        ;
+; Total registers                   ; 103                                        ;
+; Total pins                        ; 66                                         ;
+; Total virtual pins                ; 0                                          ;
+; Total block memory bits           ; 6,144                                      ;
+; DSP block 18-bit elements         ; 0                                          ;
+; Total GXB Receiver Channel PCS    ; 0                                          ;
+; Total GXB Receiver Channel PMA    ; 0                                          ;
+; Total GXB Transmitter Channel PCS ; 0                                          ;
+; Total GXB Transmitter Channel PMA ; 0                                          ;
+; Total PLLs                        ; 0                                          ;
+; Total DLLs                        ; 0                                          ;
++-----------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                           ; MipsDataPath       ; prac5              ;
+; Family name                                                                     ; Arria II GX        ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; Off                ; Off                ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                        ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                               ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; Off                ; Off                ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++-----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                           ; Library ;
++-----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; MipsDataPath.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/MipsDataPath.bdf              ;         ;
+; ControlUnit.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/ControlUnit.bdf               ;         ;
+; ../prac4/quartus/RegisterFile.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Mehrshad/OneDrive/Desktop/prac4/quartus/RegisterFile.bdf      ;         ;
+; ../prac4/quartus/memory.bdf       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Mehrshad/OneDrive/Desktop/prac4/quartus/memory.bdf            ;         ;
+; ../prac4/quartus/Register8bit.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Mehrshad/OneDrive/Desktop/prac4/quartus/Register8bit.bdf      ;         ;
+; E:/project/register.bdf           ; yes             ; User Block Diagram/Schematic File  ; E:/project/register.bdf                                                ;         ;
+; E:/project/not8bit.bdf            ; yes             ; User Block Diagram/Schematic File  ; E:/project/not8bit.bdf                                                 ;         ;
+; E:/project/main_circuit.bdf       ; yes             ; User Block Diagram/Schematic File  ; E:/project/main_circuit.bdf                                            ;         ;
+; E:/project/adder2bit.bdf          ; yes             ; User Block Diagram/Schematic File  ; E:/project/adder2bit.bdf                                               ;         ;
+; E:/project/adder.bdf              ; yes             ; User Block Diagram/Schematic File  ; E:/project/adder.bdf                                                   ;         ;
+; E:/project/add_circuit.bdf        ; yes             ; User Block Diagram/Schematic File  ; E:/project/add_circuit.bdf                                             ;         ;
+; E:/project/lpm_mux4.vhd           ; yes             ; User Wizard-Generated File         ; E:/project/lpm_mux4.vhd                                                ;         ;
+; E:/project/booth2.bdf             ; yes             ; User Block Diagram/Schematic File  ; E:/project/booth2.bdf                                                  ;         ;
+; E:/project/lpm_mux3.vhd           ; yes             ; User Wizard-Generated File         ; E:/project/lpm_mux3.vhd                                                ;         ;
+; ../prac4/quartus/lpm_decode0.vhd  ; yes             ; User Wizard-Generated File         ; C:/Users/Mehrshad/OneDrive/Desktop/prac4/quartus/lpm_decode0.vhd       ;         ;
+; E:/project/lpm_mux2.vhd           ; yes             ; User Wizard-Generated File         ; E:/project/lpm_mux2.vhd                                                ;         ;
+; E:/project/lpm_mux1.vhd           ; yes             ; User Wizard-Generated File         ; E:/project/lpm_mux1.vhd                                                ;         ;
+; E:/project/lpm_counter1.vhd       ; yes             ; User Wizard-Generated File         ; E:/project/lpm_counter1.vhd                                            ;         ;
+; E:/project/lpm_mux0.vhd           ; yes             ; User Wizard-Generated File         ; E:/project/lpm_mux0.vhd                                                ;         ;
+; E:/project/lpm_mux5.vhd           ; yes             ; User Wizard-Generated File         ; E:/project/lpm_mux5.vhd                                                ;         ;
+; E:/project/lpm_mux6.vhd           ; yes             ; User Wizard-Generated File         ; E:/project/lpm_mux6.vhd                                                ;         ;
+; E:/project/lpm_mux8.vhd           ; yes             ; User Wizard-Generated File         ; E:/project/lpm_mux8.vhd                                                ;         ;
+; iterative_fibo.mif                ; yes             ; User Memory Initialization File    ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/iterative_fibo.mif            ;         ;
+; lpm_ram_dq.tdf                    ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_ram_dq.tdf          ;         ;
+; altram.inc                        ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; lpm_mux.inc                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                    ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; aglobal131.inc                    ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc          ;         ;
+; altram.tdf                        ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altram.tdf              ;         ;
+; memmodes.inc                      ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/others/maxplus2/memmodes.inc          ;         ;
+; altsyncram.inc                    ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.inc          ;         ;
+; altsyncram.tdf                    ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc             ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; a_rdenreg.inc                     ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                        ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altdpram.inc                      ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_g1h1.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/db/altsyncram_g1h1.tdf        ;         ;
+; lpm_mux.tdf                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
+; muxlut.inc                        ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
+; bypassff.inc                      ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                      ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; db/mux_84e.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/db/mux_84e.tdf                ;         ;
+; lpm_counter.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
+; lpm_constant.inc                  ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; lpm_add_sub.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; cmpconst.inc                      ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
+; lpm_compare.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_counter.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; dffeea.inc                        ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; alt_counter_stratix.inc           ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
+; db/cntr_b5k.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/db/cntr_b5k.tdf               ;         ;
+; db/mux_b4e.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/db/mux_b4e.tdf                ;         ;
+; 74157m.bdf                        ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/others/maxplus2/74157m.bdf            ;         ;
+; db/mux_44e.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/db/mux_44e.tdf                ;         ;
+; 21mux.bdf                         ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/others/maxplus2/21mux.bdf             ;         ;
+; lpm_xor.tdf                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_xor.tdf             ;         ;
+; db/mux_06e.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/db/mux_06e.tdf                ;         ;
+; lpm_and.tdf                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_and.tdf             ;         ;
+; lpm_or.tdf                        ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_or.tdf              ;         ;
+; db/mux_g4e.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/db/mux_g4e.tdf                ;         ;
+; lpm_decode.tdf                    ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.tdf          ;         ;
+; declut.inc                        ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/declut.inc              ;         ;
+; db/decode_evf.tdf                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/db/decode_evf.tdf             ;         ;
+; db/altsyncram_65e1.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/db/altsyncram_65e1.tdf        ;         ;
+; db/mux_54e.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/db/mux_54e.tdf                ;         ;
+; db/mux_a4e.tdf                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Mehrshad/OneDrive/Desktop/prac5/db/mux_a4e.tdf                ;         ;
++-----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++-----------------------------------------------+------------+
+; Resource                                      ; Usage      ;
++-----------------------------------------------+------------+
+; Estimated ALUTs Used                          ; 214        ;
+;     -- Combinational ALUTs                    ; 214        ;
+;     -- Memory ALUTs                           ; 0          ;
+;     -- LUT_REGs                               ; 0          ;
+; Dedicated logic registers                     ; 103        ;
+;                                               ;            ;
+; Estimated ALUTs Unavailable                   ; 47         ;
+;     -- Due to unpartnered combinational logic ; 47         ;
+;     -- Due to Memory ALUTs                    ; 0          ;
+;                                               ;            ;
+; Total combinational functions                 ; 214        ;
+; Combinational ALUT usage by number of inputs  ;            ;
+;     -- 7 input functions                      ; 6          ;
+;     -- 6 input functions                      ; 83         ;
+;     -- 5 input functions                      ; 35         ;
+;     -- 4 input functions                      ; 53         ;
+;     -- <=3 input functions                    ; 37         ;
+;                                               ;            ;
+; Combinational ALUTs by mode                   ;            ;
+;     -- normal mode                            ; 208        ;
+;     -- extended LUT mode                      ; 6          ;
+;     -- arithmetic mode                        ; 0          ;
+;     -- shared arithmetic mode                 ; 0          ;
+;                                               ;            ;
+; Estimated ALUT/register pairs used            ; 310        ;
+;                                               ;            ;
+; Total registers                               ; 103        ;
+;     -- Dedicated logic registers              ; 103        ;
+;     -- I/O registers                          ; 0          ;
+;     -- LUT_REGs                               ; 0          ;
+;                                               ;            ;
+;                                               ;            ;
+; I/O pins                                      ; 66         ;
+; Total MLAB memory bits                        ; 0          ;
+; Total block memory bits                       ; 6144       ;
+; DSP block 18-bit elements                     ; 0          ;
+; Maximum fan-out node                          ; CLK3~input ;
+; Maximum fan-out                               ; 80         ;
+; Total fan-out                                 ; 1660       ;
+; Average fan-out                               ; 3.51       ;
++-----------------------------------------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                          ;
++-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |MipsDataPath                                   ; 214 (1)           ; 103 (0)      ; 6144              ; 0            ; 0       ; 0         ; 0         ; 0         ; 66   ; 0            ; |MipsDataPath                                                                                                                     ; work         ;
+;    |ControlUnit:inst31|                         ; 14 (14)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|ControlUnit:inst31                                                                                                  ; work         ;
+;    |Register8bit:inst13|                        ; 4 (4)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|Register8bit:inst13                                                                                                 ; work         ;
+;    |RegisterFile:inst7|                         ; 57 (0)            ; 80 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7                                                                                                  ; work         ;
+;       |Register8bit:inst10|                     ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst10                                                                              ; work         ;
+;       |Register8bit:inst11|                     ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst11                                                                              ; work         ;
+;       |Register8bit:inst2|                      ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst2                                                                               ; work         ;
+;       |Register8bit:inst3|                      ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst3                                                                               ; work         ;
+;       |Register8bit:inst5|                      ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst5                                                                               ; work         ;
+;       |Register8bit:inst6|                      ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst6                                                                               ; work         ;
+;       |Register8bit:inst7|                      ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst7                                                                               ; work         ;
+;       |Register8bit:inst8|                      ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst8                                                                               ; work         ;
+;       |Register8bit:inst9|                      ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst9                                                                               ; work         ;
+;       |Register8bit:inst|                       ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst                                                                                ; work         ;
+;       |lpm_decode0:inst13|                      ; 9 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|lpm_decode0:inst13                                                                               ; work         ;
+;          |lpm_decode:LPM_DECODE_component|      ; 9 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|lpm_decode0:inst13|lpm_decode:LPM_DECODE_component                                               ; work         ;
+;             |decode_evf:auto_generated|         ; 9 (9)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|lpm_decode0:inst13|lpm_decode:LPM_DECODE_component|decode_evf:auto_generated                     ; work         ;
+;       |lpm_mux6:inst14|                         ; 24 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|lpm_mux6:inst14                                                                                  ; work         ;
+;          |lpm_mux:LPM_MUX_component|            ; 24 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|lpm_mux6:inst14|lpm_mux:LPM_MUX_component                                                        ; work         ;
+;             |mux_g4e:auto_generated|            ; 24 (24)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|lpm_mux6:inst14|lpm_mux:LPM_MUX_component|mux_g4e:auto_generated                                 ; work         ;
+;       |lpm_mux6:inst17|                         ; 24 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|lpm_mux6:inst17                                                                                  ; work         ;
+;          |lpm_mux:LPM_MUX_component|            ; 24 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|lpm_mux6:inst17|lpm_mux:LPM_MUX_component                                                        ; work         ;
+;             |mux_g4e:auto_generated|            ; 24 (24)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|RegisterFile:inst7|lpm_mux6:inst17|lpm_mux:LPM_MUX_component|mux_g4e:auto_generated                                 ; work         ;
+;    |add_circuit:inst15|                         ; 4 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst15                                                                                                  ; work         ;
+;       |adder:inst2|                             ; 2 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst15|adder:inst2                                                                                      ; work         ;
+;          |adder2bit:inst13|                     ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst15|adder:inst2|adder2bit:inst13                                                                     ; work         ;
+;          |adder2bit:inst14|                     ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst15|adder:inst2|adder2bit:inst14                                                                     ; work         ;
+;       |adder:inst|                              ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst15|adder:inst                                                                                       ; work         ;
+;          |adder2bit:inst14|                     ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst15|adder:inst|adder2bit:inst14                                                                      ; work         ;
+;       |lpm_mux0:inst8|                          ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst15|lpm_mux0:inst8                                                                                   ; work         ;
+;          |lpm_mux:LPM_MUX_component|            ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst15|lpm_mux0:inst8|lpm_mux:LPM_MUX_component                                                         ; work         ;
+;             |mux_44e:auto_generated|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst15|lpm_mux0:inst8|lpm_mux:LPM_MUX_component|mux_44e:auto_generated                                  ; work         ;
+;    |add_circuit:inst16|                         ; 11 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16                                                                                                  ; work         ;
+;       |adder:inst1|                             ; 4 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16|adder:inst1                                                                                      ; work         ;
+;          |adder2bit:inst12|                     ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16|adder:inst1|adder2bit:inst12                                                                     ; work         ;
+;          |adder2bit:inst13|                     ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16|adder:inst1|adder2bit:inst13                                                                     ; work         ;
+;          |adder2bit:inst14|                     ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16|adder:inst1|adder2bit:inst14                                                                     ; work         ;
+;       |adder:inst2|                             ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16|adder:inst2                                                                                      ; work         ;
+;          |adder2bit:inst12|                     ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16|adder:inst2|adder2bit:inst12                                                                     ; work         ;
+;          |adder2bit:inst14|                     ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16|adder:inst2|adder2bit:inst14                                                                     ; work         ;
+;       |adder:inst|                              ; 4 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16|adder:inst                                                                                       ; work         ;
+;          |adder2bit:inst12|                     ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16|adder:inst|adder2bit:inst12                                                                      ; work         ;
+;          |adder2bit:inst13|                     ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16|adder:inst|adder2bit:inst13                                                                      ; work         ;
+;          |adder2bit:inst14|                     ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|add_circuit:inst16|adder:inst|adder2bit:inst14                                                                      ; work         ;
+;    |lpm_mux1:inst9|                             ; 12 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux1:inst9                                                                                                      ; work         ;
+;       |lpm_mux:LPM_MUX_component|               ; 12 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux1:inst9|lpm_mux:LPM_MUX_component                                                                            ; work         ;
+;          |mux_b4e:auto_generated|               ; 12 (12)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux1:inst9|lpm_mux:LPM_MUX_component|mux_b4e:auto_generated                                                     ; work         ;
+;    |lpm_mux4:inst27|                            ; 14 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux4:inst27                                                                                                     ; work         ;
+;       |lpm_mux:LPM_MUX_component|               ; 14 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux4:inst27|lpm_mux:LPM_MUX_component                                                                           ; work         ;
+;          |mux_84e:auto_generated|               ; 14 (14)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux4:inst27|lpm_mux:LPM_MUX_component|mux_84e:auto_generated                                                    ; work         ;
+;    |lpm_mux5:inst2|                             ; 14 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux5:inst2                                                                                                      ; work         ;
+;       |lpm_mux:LPM_MUX_component|               ; 14 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux5:inst2|lpm_mux:LPM_MUX_component                                                                            ; work         ;
+;          |mux_a4e:auto_generated|               ; 14 (14)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux5:inst2|lpm_mux:LPM_MUX_component|mux_a4e:auto_generated                                                     ; work         ;
+;    |lpm_mux8:inst|                              ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux8:inst                                                                                                       ; work         ;
+;       |lpm_mux:LPM_MUX_component|               ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux8:inst|lpm_mux:LPM_MUX_component                                                                             ; work         ;
+;          |mux_54e:auto_generated|               ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|lpm_mux8:inst|lpm_mux:LPM_MUX_component|mux_54e:auto_generated                                                      ; work         ;
+;    |main_circuit:inst11|                        ; 80 (2)            ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11                                                                                                 ; work         ;
+;       |21mux:inst35|                            ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|21mux:inst35                                                                                    ; work         ;
+;       |add_circuit:inst8|                       ; 7 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8                                                                               ; work         ;
+;          |adder:inst1|                          ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8|adder:inst1                                                                   ; work         ;
+;             |adder2bit:inst12|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8|adder:inst1|adder2bit:inst12                                                  ; work         ;
+;          |adder:inst2|                          ; 4 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8|adder:inst2                                                                   ; work         ;
+;             |adder2bit:inst11|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8|adder:inst2|adder2bit:inst11                                                  ; work         ;
+;             |adder2bit:inst12|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8|adder:inst2|adder2bit:inst12                                                  ; work         ;
+;             |adder2bit:inst13|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8|adder:inst2|adder2bit:inst13                                                  ; work         ;
+;             |adder2bit:inst14|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8|adder:inst2|adder2bit:inst14                                                  ; work         ;
+;          |adder:inst|                           ; 2 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8|adder:inst                                                                    ; work         ;
+;             |adder2bit:inst12|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8|adder:inst|adder2bit:inst12                                                   ; work         ;
+;             |adder2bit:inst13|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8|adder:inst|adder2bit:inst13                                                   ; work         ;
+;       |add_circuit:inst9|                       ; 8 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9                                                                               ; work         ;
+;          |adder:inst1|                          ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|adder:inst1                                                                   ; work         ;
+;             |adder2bit:inst13|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|adder:inst1|adder2bit:inst13                                                  ; work         ;
+;          |adder:inst2|                          ; 5 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|adder:inst2                                                                   ; work         ;
+;             |adder2bit:inst11|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|adder:inst2|adder2bit:inst11                                                  ; work         ;
+;             |adder2bit:inst13|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|adder:inst2|adder2bit:inst13                                                  ; work         ;
+;             |adder2bit:inst14|                  ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|adder:inst2|adder2bit:inst14                                                  ; work         ;
+;          |adder:inst|                           ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|adder:inst                                                                    ; work         ;
+;             |adder2bit:inst13|                  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|adder:inst|adder2bit:inst13                                                   ; work         ;
+;          |lpm_mux0:inst8|                       ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|lpm_mux0:inst8                                                                ; work         ;
+;             |lpm_mux:LPM_MUX_component|         ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|lpm_mux0:inst8|lpm_mux:LPM_MUX_component                                      ; work         ;
+;                |mux_44e:auto_generated|         ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|lpm_mux0:inst8|lpm_mux:LPM_MUX_component|mux_44e:auto_generated               ; work         ;
+;       |booth2:inst34|                           ; 18 (0)            ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34                                                                                   ; work         ;
+;          |add_circuit:inst5|                    ; 10 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5                                                                 ; work         ;
+;             |adder:inst1|                       ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|adder:inst1                                                     ; work         ;
+;                |adder2bit:inst14|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|adder:inst1|adder2bit:inst14                                    ; work         ;
+;             |adder:inst2|                       ; 5 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|adder:inst2                                                     ; work         ;
+;                |adder2bit:inst11|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|adder:inst2|adder2bit:inst11                                    ; work         ;
+;                |adder2bit:inst13|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|adder:inst2|adder2bit:inst13                                    ; work         ;
+;                |adder2bit:inst14|               ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|adder:inst2|adder2bit:inst14                                    ; work         ;
+;             |adder:inst|                        ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|adder:inst                                                      ; work         ;
+;                |adder2bit:inst14|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|adder:inst|adder2bit:inst14                                     ; work         ;
+;             |lpm_mux0:inst8|                    ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|lpm_mux0:inst8                                                  ; work         ;
+;                |lpm_mux:LPM_MUX_component|      ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|lpm_mux0:inst8|lpm_mux:LPM_MUX_component                        ; work         ;
+;                   |mux_44e:auto_generated|      ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|lpm_mux0:inst8|lpm_mux:LPM_MUX_component|mux_44e:auto_generated ; work         ;
+;          |lpm_mux1:inst11|                      ; 7 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|lpm_mux1:inst11                                                                   ; work         ;
+;             |lpm_mux:LPM_MUX_component|         ; 7 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|lpm_mux1:inst11|lpm_mux:LPM_MUX_component                                         ; work         ;
+;                |mux_b4e:auto_generated|         ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|lpm_mux1:inst11|lpm_mux:LPM_MUX_component|mux_b4e:auto_generated                  ; work         ;
+;          |register:inst2|                       ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|register:inst2                                                                    ; work         ;
+;          |register:inst|                        ; 1 (1)             ; 7 (7)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|booth2:inst34|register:inst                                                                     ; work         ;
+;       |lpm_mux3:inst36|                         ; 36 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|lpm_mux3:inst36                                                                                 ; work         ;
+;          |lpm_mux:LPM_MUX_component|            ; 36 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|lpm_mux3:inst36|lpm_mux:LPM_MUX_component                                                       ; work         ;
+;             |mux_06e:auto_generated|            ; 36 (36)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|lpm_mux3:inst36|lpm_mux:LPM_MUX_component|mux_06e:auto_generated                                ; work         ;
+;       |lpm_xor:inst2|                           ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|main_circuit:inst11|lpm_xor:inst2                                                                                   ; work         ;
+;    |memory:inst10|                              ; 0 (0)             ; 0 (0)        ; 4096              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|memory:inst10                                                                                                       ; work         ;
+;       |lpm_ram_dq:inst2|                        ; 0 (0)             ; 0 (0)        ; 4096              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|memory:inst10|lpm_ram_dq:inst2                                                                                      ; work         ;
+;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 4096              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|memory:inst10|lpm_ram_dq:inst2|altram:sram                                                                          ; work         ;
+;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 4096              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|memory:inst10|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block                                                     ; work         ;
+;                |altsyncram_g1h1:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|memory:inst10|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_g1h1:auto_generated                      ; work         ;
+;    |memory:inst8|                               ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|memory:inst8                                                                                                        ; work         ;
+;       |lpm_ram_dq:inst2|                        ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|memory:inst8|lpm_ram_dq:inst2                                                                                       ; work         ;
+;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|memory:inst8|lpm_ram_dq:inst2|altram:sram                                                                           ; work         ;
+;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|memory:inst8|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block                                                      ; work         ;
+;                |altsyncram_65e1:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |MipsDataPath|memory:inst8|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated                       ; work         ;
++-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                       ;
++-----------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------------+
+; Name                                                                                                      ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                ;
++-----------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------------+
+; memory:inst10|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_g1h1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 16           ; --           ; --           ; 4096 ; iterative_fibo.mif ;
+; memory:inst8|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|ALTSYNCRAM  ; AUTO ; Single Port ; 256          ; 16           ; --           ; --           ; 4096 ; None               ;
++-----------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                               ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------------------------------+------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                  ; IP Include File                                                  ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------------------------------+------------------------------------------------------------------+
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|lpm_mux8:inst                                                      ; E:/project/lpm_mux8.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|lpm_mux5:inst2                                                     ; E:/project/lpm_mux5.vhd                                          ;
+; Altera ; LPM_DECODE   ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|RegisterFile:inst7|lpm_decode0:inst13                              ; C:/Users/Mehrshad/OneDrive/Desktop/prac4/quartus/lpm_decode0.vhd ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|RegisterFile:inst7|lpm_mux6:inst14                                 ; E:/project/lpm_mux6.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|RegisterFile:inst7|lpm_mux6:inst17                                 ; E:/project/lpm_mux6.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|lpm_mux1:inst9                                                     ; E:/project/lpm_mux1.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|main_circuit:inst11|add_circuit:inst8|lpm_mux0:inst8               ; E:/project/lpm_mux0.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|main_circuit:inst11|add_circuit:inst9|lpm_mux0:inst8               ; E:/project/lpm_mux0.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst4|lpm_mux0:inst8 ; E:/project/lpm_mux0.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|main_circuit:inst11|booth2:inst34|add_circuit:inst5|lpm_mux0:inst8 ; E:/project/lpm_mux0.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|main_circuit:inst11|booth2:inst34|lpm_mux2:inst10                  ; E:/project/lpm_mux2.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|main_circuit:inst11|booth2:inst34|lpm_mux1:inst11                  ; E:/project/lpm_mux1.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|main_circuit:inst11|booth2:inst34|lpm_mux2:inst12                  ; E:/project/lpm_mux2.vhd                                          ;
+; Altera ; LPM_COUNTER  ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|main_circuit:inst11|booth2:inst34|lpm_counter1:inst20              ; E:/project/lpm_counter1.vhd                                      ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|main_circuit:inst11|lpm_mux3:inst36                                ; E:/project/lpm_mux3.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|add_circuit:inst15|lpm_mux0:inst8                                  ; E:/project/lpm_mux0.vhd                                          ;
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |MipsDataPath|add_circuit:inst16|lpm_mux0:inst8                                  ; E:/project/lpm_mux0.vhd                                          ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |MipsDataPath|lpm_mux4:inst25                                                    ; E:/project/lpm_mux4.vhd                                          ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |MipsDataPath|lpm_mux4:inst26                                                    ; E:/project/lpm_mux4.vhd                                          ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |MipsDataPath|lpm_mux4:inst27                                                    ; E:/project/lpm_mux4.vhd                                          ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------------------------------+------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                   ;
++----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+; Register name                                                                                                                    ; Reason for Removal                                                ;
++----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+; main_circuit:inst11|booth2:inst34|inst13                                                                                         ; Lost fanout                                                       ;
+; main_circuit:inst11|booth2:inst34|register:inst|inst7                                                                            ; Merged with main_circuit:inst11|booth2:inst34|register:inst|inst6 ;
+; main_circuit:inst11|booth2:inst34|inst15                                                                                         ; Stuck at GND due to stuck port data_in                            ;
+; main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component|cntr_b5k:auto_generated|counter_reg_bit0 ; Stuck at GND due to stuck port clock_enable                       ;
+; main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component|cntr_b5k:auto_generated|counter_reg_bit1 ; Stuck at GND due to stuck port clock_enable                       ;
+; main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component|cntr_b5k:auto_generated|counter_reg_bit2 ; Stuck at GND due to stuck port clock_enable                       ;
+; main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component|cntr_b5k:auto_generated|counter_reg_bit3 ; Stuck at VCC due to stuck port clock_enable                       ;
+; main_circuit:inst11|booth2:inst34|inst3                                                                                          ; Stuck at GND due to stuck port data_in                            ;
+; Total Number of Removed Registers = 8                                                                                            ;                                                                   ;
++----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                    ;
++------------------------------------------+---------------------------+-----------------------------------------+
+; Register name                            ; Reason for Removal        ; Registers Removed due to This Register  ;
++------------------------------------------+---------------------------+-----------------------------------------+
+; main_circuit:inst11|booth2:inst34|inst15 ; Stuck at GND              ; main_circuit:inst11|booth2:inst34|inst3 ;
+;                                          ; due to stuck port data_in ;                                         ;
++------------------------------------------+---------------------------+-----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 103   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 67    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
+; 4:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; Yes        ; |MipsDataPath|Register8bit:inst13|inst7                                                                                 ;
+; 8:1                ; 8 bits    ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; Yes        ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst2|inst9                                                               ;
+; 8:1                ; 8 bits    ; 40 ALUTs      ; 40 ALUTs             ; 0 ALUTs                ; Yes        ; |MipsDataPath|RegisterFile:inst7|Register8bit:inst3|inst8                                                               ;
+; 6:1                ; 3 bits    ; 12 ALUTs      ; 9 ALUTs              ; 3 ALUTs                ; Yes        ; |MipsDataPath|Register8bit:inst13|inst3                                                                                 ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |MipsDataPath|lpm_mux1:inst9|lpm_mux:LPM_MUX_component|mux_b4e:auto_generated|l2_w6_n0_mux_dataout                      ;
+; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |MipsDataPath|main_circuit:inst11|lpm_mux3:inst36|lpm_mux:LPM_MUX_component|mux_06e:auto_generated|l3_w4_n0_mux_dataout ;
+; 5:1                ; 3 bits    ; 9 ALUTs       ; 9 ALUTs              ; 0 ALUTs                ; No         ; |MipsDataPath|main_circuit:inst11|lpm_mux3:inst36|lpm_mux:LPM_MUX_component|mux_06e:auto_generated|l3_w7_n0_mux_dataout ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for memory:inst10|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block|altsyncram_g1h1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                      ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                       ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component|cntr_b5k:auto_generated ;
++----------------+-------+------+--------------------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                                     ;
++----------------+-------+------+--------------------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter_reg_bit3                                                                                       ;
++----------------+-------+------+--------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for memory:inst8|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                     ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                      ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for memory:inst36|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                      ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                       ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:inst10|LPM_RAM_DQ:inst2 ;
++------------------------+--------------------+-------------------------------+
+; Parameter Name         ; Value              ; Type                          ;
++------------------------+--------------------+-------------------------------+
+; LPM_WIDTH              ; 16                 ; Untyped                       ;
+; LPM_WIDTHAD            ; 8                  ; Untyped                       ;
+; LPM_NUMWORDS           ; 256                ; Untyped                       ;
+; LPM_INDATA             ; REGISTERED         ; Untyped                       ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED         ; Untyped                       ;
+; LPM_OUTDATA            ; UNREGISTERED       ; Untyped                       ;
+; LPM_FILE               ; iterative_fibo.mif ; Untyped                       ;
+; USE_EAB                ; ON                 ; Untyped                       ;
+; DEVICE_FAMILY          ; Arria II GX        ; Untyped                       ;
+; CBXI_PARAMETER         ; NOTHING            ; Untyped                       ;
+; AUTO_CARRY_CHAINS      ; ON                 ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF                ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS    ; ON                 ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF                ; IGNORE_CASCADE                ;
++------------------------+--------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux4:inst27|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+-------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                            ;
++------------------------+-------------+-------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                  ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                  ;
+; LPM_SIZE               ; 2           ; Signed Integer                                  ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                  ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                  ;
+; CBXI_PARAMETER         ; mux_84e     ; Untyped                                         ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                         ;
++------------------------+-------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux4:inst26|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+-------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                            ;
++------------------------+-------------+-------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                  ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                  ;
+; LPM_SIZE               ; 2           ; Signed Integer                                  ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                  ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                  ;
+; CBXI_PARAMETER         ; mux_84e     ; Untyped                                         ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                         ;
++------------------------+-------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux4:inst25|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+-------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                            ;
++------------------------+-------------+-------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                  ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                  ;
+; LPM_SIZE               ; 2           ; Signed Integer                                  ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                  ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                  ;
+; CBXI_PARAMETER         ; mux_84e     ; Untyped                                         ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                         ;
++------------------------+-------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                          ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                                                                ;
+; LPM_DIRECTION          ; DOWN        ; Untyped                                                                                       ;
+; LPM_MODULUS            ; 0           ; Untyped                                                                                       ;
+; LPM_AVALUE             ; 8           ; Untyped                                                                                       ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                                       ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                                       ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                                                       ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                            ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                                            ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                                       ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                                       ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                                       ;
+; CBXI_PARAMETER         ; cntr_b5k    ; Untyped                                                                                       ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|lpm_mux2:inst12|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+-----------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                              ;
++------------------------+-------------+-----------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                    ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                                                    ;
+; LPM_SIZE               ; 2           ; Signed Integer                                                                    ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                                                    ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                    ;
+; CBXI_PARAMETER         ; mux_84e     ; Untyped                                                                           ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                                           ;
++------------------------+-------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|lpm_mux1:inst11|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+-----------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                              ;
++------------------------+-------------+-----------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                    ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                                                    ;
+; LPM_SIZE               ; 4           ; Signed Integer                                                                    ;
+; LPM_WIDTHS             ; 2           ; Signed Integer                                                                    ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                    ;
+; CBXI_PARAMETER         ; mux_b4e     ; Untyped                                                                           ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                                           ;
++------------------------+-------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|lpm_mux2:inst10|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+-----------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                              ;
++------------------------+-------------+-----------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                    ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                                                    ;
+; LPM_SIZE               ; 2           ; Signed Integer                                                                    ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                                                    ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                    ;
+; CBXI_PARAMETER         ; mux_84e     ; Untyped                                                                           ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                                           ;
++------------------------+-------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|add_circuit:inst4|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                               ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                     ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                                                                     ;
+; LPM_SIZE               ; 2           ; Signed Integer                                                                                     ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                                                                     ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                     ;
+; CBXI_PARAMETER         ; mux_44e     ; Untyped                                                                                            ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                                                            ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|booth2:inst34|add_circuit:inst5|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                               ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                     ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                                                                     ;
+; LPM_SIZE               ; 2           ; Signed Integer                                                                                     ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                                                                     ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                     ;
+; CBXI_PARAMETER         ; mux_44e     ; Untyped                                                                                            ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                                                            ;
++------------------------+-------------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|LPM_XOR:inst2 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; LPM_WIDTH      ; 8     ; Untyped                                               ;
+; LPM_SIZE       ; 2     ; Untyped                                               ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|lpm_mux3:inst36|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+---------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                ;
++------------------------+-------------+---------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                      ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                                      ;
+; LPM_SIZE               ; 16          ; Signed Integer                                                      ;
+; LPM_WIDTHS             ; 4           ; Signed Integer                                                      ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                      ;
+; CBXI_PARAMETER         ; mux_06e     ; Untyped                                                             ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                             ;
++------------------------+-------------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|LPM_AND:inst3 ;
++------------------------+-------------+-----------------------------------------+
+; Parameter Name         ; Value       ; Type                                    ;
++------------------------+-------------+-----------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                          ;
+; LPM_WIDTH              ; 8           ; Untyped                                 ;
+; LPM_SIZE               ; 2           ; Untyped                                 ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                      ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                 ;
+; CASCADE_CHAIN          ; MANUAL      ; Untyped                                 ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                 ;
++------------------------+-------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|LPM_OR:inst ;
++------------------------+-------------+---------------------------------------+
+; Parameter Name         ; Value       ; Type                                  ;
++------------------------+-------------+---------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                        ;
+; LPM_WIDTH              ; 8           ; Untyped                               ;
+; LPM_SIZE               ; 2           ; Untyped                               ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                               ;
+; CASCADE_CHAIN          ; MANUAL      ; Untyped                               ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                               ;
++------------------------+-------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|add_circuit:inst8|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                 ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                       ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                                                       ;
+; LPM_SIZE               ; 2           ; Signed Integer                                                                       ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                                                       ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                       ;
+; CBXI_PARAMETER         ; mux_44e     ; Untyped                                                                              ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                                              ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: main_circuit:inst11|add_circuit:inst9|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                 ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                       ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                                                       ;
+; LPM_SIZE               ; 2           ; Signed Integer                                                                       ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                                                       ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                       ;
+; CBXI_PARAMETER         ; mux_44e     ; Untyped                                                                              ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                                              ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:inst7|lpm_mux6:inst17|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+--------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                               ;
++------------------------+-------------+--------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                     ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                                     ;
+; LPM_SIZE               ; 8           ; Signed Integer                                                     ;
+; LPM_WIDTHS             ; 3           ; Signed Integer                                                     ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                     ;
+; CBXI_PARAMETER         ; mux_g4e     ; Untyped                                                            ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                            ;
++------------------------+-------------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:inst7|lpm_decode0:inst13|lpm_decode:LPM_DECODE_component ;
++------------------------+-------------+-----------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                        ;
++------------------------+-------------+-----------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8           ; Signed Integer                                                              ;
+; LPM_DECODES            ; 256         ; Signed Integer                                                              ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                     ;
+; CASCADE_CHAIN          ; MANUAL      ; Untyped                                                                     ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                                     ;
+; CBXI_PARAMETER         ; decode_evf  ; Untyped                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                              ;
++------------------------+-------------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:inst7|lpm_mux6:inst14|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+--------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                               ;
++------------------------+-------------+--------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                     ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                                     ;
+; LPM_SIZE               ; 8           ; Signed Integer                                                     ;
+; LPM_WIDTHS             ; 3           ; Signed Integer                                                     ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                     ;
+; CBXI_PARAMETER         ; mux_g4e     ; Untyped                                                            ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                            ;
++------------------------+-------------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux1:inst9|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                           ;
++------------------------+-------------+------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                 ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                 ;
+; LPM_SIZE               ; 4           ; Signed Integer                                 ;
+; LPM_WIDTHS             ; 2           ; Signed Integer                                 ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                 ;
+; CBXI_PARAMETER         ; mux_b4e     ; Untyped                                        ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                        ;
++------------------------+-------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:inst8|LPM_RAM_DQ:inst2 ;
++------------------------+--------------+------------------------------------+
+; Parameter Name         ; Value        ; Type                               ;
++------------------------+--------------+------------------------------------+
+; LPM_WIDTH              ; 16           ; Untyped                            ;
+; LPM_WIDTHAD            ; 8            ; Untyped                            ;
+; LPM_NUMWORDS           ; 256          ; Untyped                            ;
+; LPM_INDATA             ; REGISTERED   ; Untyped                            ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED   ; Untyped                            ;
+; LPM_OUTDATA            ; UNREGISTERED ; Untyped                            ;
+; LPM_FILE               ; UNUSED       ; Untyped                            ;
+; USE_EAB                ; ON           ; Untyped                            ;
+; DEVICE_FAMILY          ; Arria II GX  ; Untyped                            ;
+; CBXI_PARAMETER         ; NOTHING      ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                     ;
++------------------------+--------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux8:inst|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+-----------------------------------------------+
+; Parameter Name         ; Value       ; Type                                          ;
++------------------------+-------------+-----------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                ;
+; LPM_WIDTH              ; 3           ; Signed Integer                                ;
+; LPM_SIZE               ; 3           ; Signed Integer                                ;
+; LPM_WIDTHS             ; 2           ; Signed Integer                                ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                ;
+; CBXI_PARAMETER         ; mux_54e     ; Untyped                                       ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                       ;
++------------------------+-------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux5:inst2|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                           ;
++------------------------+-------------+------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                 ;
+; LPM_WIDTH              ; 8           ; Signed Integer                                 ;
+; LPM_SIZE               ; 3           ; Signed Integer                                 ;
+; LPM_WIDTHS             ; 2           ; Signed Integer                                 ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                 ;
+; CBXI_PARAMETER         ; mux_a4e     ; Untyped                                        ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                        ;
++------------------------+-------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_circuit:inst15|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+-------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                              ;
++------------------------+-------------+-------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                    ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                                    ;
+; LPM_SIZE               ; 2           ; Signed Integer                                                    ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                                    ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                    ;
+; CBXI_PARAMETER         ; mux_44e     ; Untyped                                                           ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                           ;
++------------------------+-------------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_circuit:inst16|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+-------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                              ;
++------------------------+-------------+-------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                    ;
+; LPM_WIDTH              ; 4           ; Signed Integer                                                    ;
+; LPM_SIZE               ; 2           ; Signed Integer                                                    ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                                    ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                    ;
+; CBXI_PARAMETER         ; mux_44e     ; Untyped                                                           ;
+; DEVICE_FAMILY          ; Arria II GX ; Untyped                                                           ;
++------------------------+-------------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:inst36|LPM_RAM_DQ:inst2 ;
++------------------------+--------------+-------------------------------------+
+; Parameter Name         ; Value        ; Type                                ;
++------------------------+--------------+-------------------------------------+
+; LPM_WIDTH              ; 16           ; Untyped                             ;
+; LPM_WIDTHAD            ; 8            ; Untyped                             ;
+; LPM_NUMWORDS           ; 256          ; Untyped                             ;
+; LPM_INDATA             ; REGISTERED   ; Untyped                             ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED   ; Untyped                             ;
+; LPM_OUTDATA            ; UNREGISTERED ; Untyped                             ;
+; LPM_FILE               ; UNUSED       ; Untyped                             ;
+; USE_EAB                ; ON           ; Untyped                             ;
+; DEVICE_FAMILY          ; Arria II GX  ; Untyped                             ;
+; CBXI_PARAMETER         ; NOTHING      ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                      ;
++------------------------+--------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Mon Apr 08 22:36:05 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off prac5 -c prac5
+Warning (125092): Tcl Script File ../forpr5/lpm_mux0.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE ../forpr5/lpm_mux0.qip
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file mipsdatapath.bdf
+    Info (12023): Found entity 1: MipsDataPath
+Info (12021): Found 1 design units, including 1 entities, in source file controlunit.bdf
+    Info (12023): Found entity 1: ControlUnit
+Info (12021): Found 1 design units, including 1 entities, in source file /users/mehrshad/onedrive/desktop/prac4/quartus/registerfile.bdf
+    Info (12023): Found entity 1: RegisterFile
+Info (12021): Found 1 design units, including 1 entities, in source file /users/mehrshad/onedrive/desktop/prac4/quartus/memory.bdf
+    Info (12023): Found entity 1: memory
+Info (12021): Found 1 design units, including 1 entities, in source file /users/mehrshad/onedrive/desktop/prac4/quartus/register8bit.bdf
+    Info (12023): Found entity 1: Register8bit
+Info (12021): Found 1 design units, including 1 entities, in source file e:/project/register.bdf
+    Info (12023): Found entity 1: register
+Info (12021): Found 1 design units, including 1 entities, in source file e:/project/not8bit.bdf
+    Info (12023): Found entity 1: not8bit
+Info (12021): Found 1 design units, including 1 entities, in source file e:/project/main_circuit.bdf
+    Info (12023): Found entity 1: main_circuit
+Info (12021): Found 1 design units, including 1 entities, in source file e:/project/adder2bit.bdf
+    Info (12023): Found entity 1: adder2bit
+Info (12021): Found 1 design units, including 1 entities, in source file e:/project/adder.bdf
+    Info (12023): Found entity 1: adder
+Info (12021): Found 1 design units, including 1 entities, in source file e:/project/add_circuit.bdf
+    Info (12023): Found entity 1: add_circuit
+Info (12021): Found 2 design units, including 1 entities, in source file e:/project/lpm_mux4.vhd
+    Info (12022): Found design unit 1: lpm_mux4-SYN
+    Info (12023): Found entity 1: lpm_mux4
+Info (12021): Found 1 design units, including 1 entities, in source file e:/project/booth2.bdf
+    Info (12023): Found entity 1: booth2
+Info (12021): Found 2 design units, including 1 entities, in source file e:/project/lpm_mux3.vhd
+    Info (12022): Found design unit 1: lpm_mux3-SYN
+    Info (12023): Found entity 1: lpm_mux3
+Info (12021): Found 2 design units, including 1 entities, in source file /users/mehrshad/onedrive/desktop/prac4/quartus/lpm_decode0.vhd
+    Info (12022): Found design unit 1: lpm_decode0-SYN
+    Info (12023): Found entity 1: lpm_decode0
+Info (12021): Found 2 design units, including 1 entities, in source file e:/project/lpm_mux2.vhd
+    Info (12022): Found design unit 1: lpm_mux2-SYN
+    Info (12023): Found entity 1: lpm_mux2
+Info (12021): Found 2 design units, including 1 entities, in source file e:/project/lpm_mux1.vhd
+    Info (12022): Found design unit 1: lpm_mux1-SYN
+    Info (12023): Found entity 1: lpm_mux1
+Info (12021): Found 2 design units, including 1 entities, in source file e:/project/lpm_counter1.vhd
+    Info (12022): Found design unit 1: lpm_counter1-SYN
+    Info (12023): Found entity 1: lpm_counter1
+Info (12021): Found 2 design units, including 1 entities, in source file e:/project/lpm_compare0.vhd
+    Info (12022): Found design unit 1: lpm_compare0-SYN
+    Info (12023): Found entity 1: lpm_compare0
+Info (12021): Found 2 design units, including 1 entities, in source file e:/project/lpm_mux0.vhd
+    Info (12022): Found design unit 1: lpm_mux0-SYN
+    Info (12023): Found entity 1: lpm_mux0
+Info (12021): Found 2 design units, including 1 entities, in source file e:/project/lpm_mux5.vhd
+    Info (12022): Found design unit 1: lpm_mux5-SYN
+    Info (12023): Found entity 1: lpm_mux5
+Info (12021): Found 2 design units, including 1 entities, in source file e:/project/lpm_mux6.vhd
+    Info (12022): Found design unit 1: lpm_mux6-SYN
+    Info (12023): Found entity 1: lpm_mux6
+Info (12021): Found 2 design units, including 1 entities, in source file e:/project/lpm_mux7.vhd
+    Info (12022): Found design unit 1: lpm_mux7-SYN
+    Info (12023): Found entity 1: lpm_mux7
+Info (12021): Found 2 design units, including 1 entities, in source file e:/project/lpm_mux8.vhd
+    Info (12022): Found design unit 1: lpm_mux8-SYN
+    Info (12023): Found entity 1: lpm_mux8
+Info (12127): Elaborating entity "MipsDataPath" for the top level hierarchy
+Warning (275006): Can't find a definition for parameter LPM_FILE -- assuming iterative_fibo.mif was intended to be a quoted string
+Warning (275013): Port "CLK" of type memory and instance "inst36" is missing source signal
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:inst31"
+Info (12128): Elaborating entity "memory" for hierarchy "memory:inst10"
+Info (12128): Elaborating entity "LPM_RAM_DQ" for hierarchy "memory:inst10|LPM_RAM_DQ:inst2"
+Info (12130): Elaborated megafunction instantiation "memory:inst10|LPM_RAM_DQ:inst2"
+Info (12133): Instantiated megafunction "memory:inst10|LPM_RAM_DQ:inst2" with the following parameter:
+    Info (12134): Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_WIDTH" = "16"
+    Info (12134): Parameter "LPM_WIDTHAD" = "8"
+Info (12128): Elaborating entity "altram" for hierarchy "memory:inst10|LPM_RAM_DQ:inst2|altram:sram"
+Warning (287001): Assertion warning: altram does not support Arria II GX device family -- attempting best-case memory conversions, but power-up states and read during write behavior will be different for Arria II GX devices
+Info (12131): Elaborated megafunction instantiation "memory:inst10|LPM_RAM_DQ:inst2|altram:sram", which is child of megafunction instantiation "memory:inst10|LPM_RAM_DQ:inst2"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memory:inst10|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block"
+Info (12131): Elaborated megafunction instantiation "memory:inst10|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block", which is child of megafunction instantiation "memory:inst10|LPM_RAM_DQ:inst2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g1h1.tdf
+    Info (12023): Found entity 1: altsyncram_g1h1
+Info (12128): Elaborating entity "altsyncram_g1h1" for hierarchy "memory:inst10|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block|altsyncram_g1h1:auto_generated"
+Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (16) in the Memory Initialization File "C:/Users/Mehrshad/OneDrive/Desktop/prac5/iterative_fibo.mif" -- setting initial value for remaining addresses to 0
+Info (12128): Elaborating entity "Register8bit" for hierarchy "Register8bit:inst13"
+Info (12128): Elaborating entity "lpm_mux4" for hierarchy "lpm_mux4:inst27"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "lpm_mux4:inst27|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "lpm_mux4:inst27|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "lpm_mux4:inst27|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_84e.tdf
+    Info (12023): Found entity 1: mux_84e
+Info (12128): Elaborating entity "mux_84e" for hierarchy "lpm_mux4:inst27|LPM_MUX:LPM_MUX_component|mux_84e:auto_generated"
+Info (12128): Elaborating entity "main_circuit" for hierarchy "main_circuit:inst11"
+Info (12128): Elaborating entity "booth2" for hierarchy "main_circuit:inst11|booth2:inst34"
+Info (12128): Elaborating entity "lpm_counter1" for hierarchy "main_circuit:inst11|booth2:inst34|lpm_counter1:inst20"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_avalue" = "8"
+    Info (12134): Parameter "lpm_direction" = "DOWN"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_b5k.tdf
+    Info (12023): Found entity 1: cntr_b5k
+Info (12128): Elaborating entity "cntr_b5k" for hierarchy "main_circuit:inst11|booth2:inst34|lpm_counter1:inst20|lpm_counter:LPM_COUNTER_component|cntr_b5k:auto_generated"
+Info (12128): Elaborating entity "register" for hierarchy "main_circuit:inst11|booth2:inst34|register:inst2"
+Info (12128): Elaborating entity "lpm_mux2" for hierarchy "main_circuit:inst11|booth2:inst34|lpm_mux2:inst12"
+Info (12128): Elaborating entity "lpm_mux1" for hierarchy "main_circuit:inst11|booth2:inst34|lpm_mux1:inst11"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "main_circuit:inst11|booth2:inst34|lpm_mux1:inst11|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "main_circuit:inst11|booth2:inst34|lpm_mux1:inst11|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "main_circuit:inst11|booth2:inst34|lpm_mux1:inst11|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_SIZE" = "4"
+    Info (12134): Parameter "LPM_WIDTHS" = "2"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_b4e.tdf
+    Info (12023): Found entity 1: mux_b4e
+Info (12128): Elaborating entity "mux_b4e" for hierarchy "main_circuit:inst11|booth2:inst34|lpm_mux1:inst11|LPM_MUX:LPM_MUX_component|mux_b4e:auto_generated"
+Info (12128): Elaborating entity "add_circuit" for hierarchy "main_circuit:inst11|booth2:inst34|add_circuit:inst4"
+Warning (275080): Converted elements in bus name "S" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "S[3..0]" to "S3..0"
+    Warning (275081): Converted element name(s) from "S[7..4]" to "S7..4"
+    Warning (275081): Converted element name(s) from "S[7..0]" to "S7..0"
+Warning (275080): Converted elements in bus name "s0" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "s0[7..4]" to "s07..4"
+    Warning (275081): Converted element name(s) from "s0[7..4]" to "s07..4"
+Warning (275080): Converted elements in bus name "s1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "s1[7..4]" to "s17..4"
+    Warning (275081): Converted element name(s) from "s1[7..4]" to "s17..4"
+Info (12128): Elaborating entity "74157M" for hierarchy "main_circuit:inst11|booth2:inst34|add_circuit:inst4|74157M:inst11"
+Info (12130): Elaborated megafunction instantiation "main_circuit:inst11|booth2:inst34|add_circuit:inst4|74157M:inst11"
+Info (12128): Elaborating entity "adder" for hierarchy "main_circuit:inst11|booth2:inst34|add_circuit:inst4|adder:inst2"
+Warning (275083): Bus "S1[3..0]" found using same base name as "S", which might lead to a name conflict.
+Warning (275083): Bus "S1[0]" found using same base name as "S", which might lead to a name conflict.
+Warning (275083): Bus "S1[1]" found using same base name as "S", which might lead to a name conflict.
+Warning (275083): Bus "S1[2]" found using same base name as "S", which might lead to a name conflict.
+Warning (275083): Bus "S1[3]" found using same base name as "S", which might lead to a name conflict.
+Warning (275080): Converted elements in bus name "S" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "S[3..0]" to "S3..0"
+Warning (275080): Converted elements in bus name "S1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "S1[3..0]" to "S13..0"
+    Warning (275081): Converted element name(s) from "S1[0]" to "S10"
+    Warning (275081): Converted element name(s) from "S1[1]" to "S11"
+    Warning (275081): Converted element name(s) from "S1[2]" to "S12"
+    Warning (275081): Converted element name(s) from "S1[3]" to "S13"
+Info (12128): Elaborating entity "adder2bit" for hierarchy "main_circuit:inst11|booth2:inst34|add_circuit:inst4|adder:inst2|adder2bit:inst14"
+Info (12128): Elaborating entity "lpm_mux0" for hierarchy "main_circuit:inst11|booth2:inst34|add_circuit:inst4|lpm_mux0:inst8"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "main_circuit:inst11|booth2:inst34|add_circuit:inst4|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "main_circuit:inst11|booth2:inst34|add_circuit:inst4|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "main_circuit:inst11|booth2:inst34|add_circuit:inst4|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "4"
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_44e.tdf
+    Info (12023): Found entity 1: mux_44e
+Info (12128): Elaborating entity "mux_44e" for hierarchy "main_circuit:inst11|booth2:inst34|add_circuit:inst4|lpm_mux0:inst8|LPM_MUX:LPM_MUX_component|mux_44e:auto_generated"
+Info (12128): Elaborating entity "not8bit" for hierarchy "main_circuit:inst11|booth2:inst34|not8bit:inst8"
+Info (12128): Elaborating entity "21mux" for hierarchy "main_circuit:inst11|booth2:inst34|21mux:inst35"
+Info (12130): Elaborated megafunction instantiation "main_circuit:inst11|booth2:inst34|21mux:inst35"
+Info (12128): Elaborating entity "LPM_XOR" for hierarchy "main_circuit:inst11|LPM_XOR:inst2"
+Info (12130): Elaborated megafunction instantiation "main_circuit:inst11|LPM_XOR:inst2"
+Info (12133): Instantiated megafunction "main_circuit:inst11|LPM_XOR:inst2" with the following parameter:
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_mux3" for hierarchy "main_circuit:inst11|lpm_mux3:inst36"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "main_circuit:inst11|lpm_mux3:inst36|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "main_circuit:inst11|lpm_mux3:inst36|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "main_circuit:inst11|lpm_mux3:inst36|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_SIZE" = "16"
+    Info (12134): Parameter "LPM_WIDTHS" = "4"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_06e.tdf
+    Info (12023): Found entity 1: mux_06e
+Info (12128): Elaborating entity "mux_06e" for hierarchy "main_circuit:inst11|lpm_mux3:inst36|LPM_MUX:LPM_MUX_component|mux_06e:auto_generated"
+Info (12128): Elaborating entity "LPM_AND" for hierarchy "main_circuit:inst11|LPM_AND:inst3"
+Info (12130): Elaborated megafunction instantiation "main_circuit:inst11|LPM_AND:inst3"
+Info (12133): Instantiated megafunction "main_circuit:inst11|LPM_AND:inst3" with the following parameter:
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "LPM_OR" for hierarchy "main_circuit:inst11|LPM_OR:inst"
+Info (12130): Elaborated megafunction instantiation "main_circuit:inst11|LPM_OR:inst"
+Info (12133): Instantiated megafunction "main_circuit:inst11|LPM_OR:inst" with the following parameter:
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:inst7"
+Info (12128): Elaborating entity "lpm_mux6" for hierarchy "RegisterFile:inst7|lpm_mux6:inst17"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "RegisterFile:inst7|lpm_mux6:inst17|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "RegisterFile:inst7|lpm_mux6:inst17|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "RegisterFile:inst7|lpm_mux6:inst17|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_SIZE" = "8"
+    Info (12134): Parameter "LPM_WIDTHS" = "3"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_g4e.tdf
+    Info (12023): Found entity 1: mux_g4e
+Info (12128): Elaborating entity "mux_g4e" for hierarchy "RegisterFile:inst7|lpm_mux6:inst17|LPM_MUX:LPM_MUX_component|mux_g4e:auto_generated"
+Info (12128): Elaborating entity "lpm_decode0" for hierarchy "RegisterFile:inst7|lpm_decode0:inst13"
+Info (12128): Elaborating entity "lpm_decode" for hierarchy "RegisterFile:inst7|lpm_decode0:inst13|lpm_decode:LPM_DECODE_component"
+Info (12130): Elaborated megafunction instantiation "RegisterFile:inst7|lpm_decode0:inst13|lpm_decode:LPM_DECODE_component"
+Info (12133): Instantiated megafunction "RegisterFile:inst7|lpm_decode0:inst13|lpm_decode:LPM_DECODE_component" with the following parameter:
+    Info (12134): Parameter "lpm_decodes" = "256"
+    Info (12134): Parameter "lpm_type" = "LPM_DECODE"
+    Info (12134): Parameter "lpm_width" = "8"
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_evf.tdf
+    Info (12023): Found entity 1: decode_evf
+Info (12128): Elaborating entity "decode_evf" for hierarchy "RegisterFile:inst7|lpm_decode0:inst13|lpm_decode:LPM_DECODE_component|decode_evf:auto_generated"
+Info (12128): Elaborating entity "LPM_RAM_DQ" for hierarchy "memory:inst8|LPM_RAM_DQ:inst2"
+Info (12130): Elaborated megafunction instantiation "memory:inst8|LPM_RAM_DQ:inst2"
+Info (12133): Instantiated megafunction "memory:inst8|LPM_RAM_DQ:inst2" with the following parameter:
+    Info (12134): Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_WIDTH" = "16"
+    Info (12134): Parameter "LPM_WIDTHAD" = "8"
+Info (12128): Elaborating entity "altram" for hierarchy "memory:inst8|LPM_RAM_DQ:inst2|altram:sram"
+Warning (287001): Assertion warning: altram does not support Arria II GX device family -- attempting best-case memory conversions, but power-up states and read during write behavior will be different for Arria II GX devices
+Info (12131): Elaborated megafunction instantiation "memory:inst8|LPM_RAM_DQ:inst2|altram:sram", which is child of megafunction instantiation "memory:inst8|LPM_RAM_DQ:inst2"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memory:inst8|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block"
+Info (12131): Elaborated megafunction instantiation "memory:inst8|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block", which is child of megafunction instantiation "memory:inst8|LPM_RAM_DQ:inst2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_65e1.tdf
+    Info (12023): Found entity 1: altsyncram_65e1
+Info (12128): Elaborating entity "altsyncram_65e1" for hierarchy "memory:inst8|LPM_RAM_DQ:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated"
+Info (12128): Elaborating entity "lpm_mux8" for hierarchy "lpm_mux8:inst"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "lpm_mux8:inst|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "lpm_mux8:inst|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "lpm_mux8:inst|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "3"
+    Info (12134): Parameter "LPM_SIZE" = "3"
+    Info (12134): Parameter "LPM_WIDTHS" = "2"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_54e.tdf
+    Info (12023): Found entity 1: mux_54e
+Info (12128): Elaborating entity "mux_54e" for hierarchy "lpm_mux8:inst|LPM_MUX:LPM_MUX_component|mux_54e:auto_generated"
+Info (12128): Elaborating entity "lpm_mux5" for hierarchy "lpm_mux5:inst2"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "lpm_mux5:inst2|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "lpm_mux5:inst2|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "lpm_mux5:inst2|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_SIZE" = "3"
+    Info (12134): Parameter "LPM_WIDTHS" = "2"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_a4e.tdf
+    Info (12023): Found entity 1: mux_a4e
+Info (12128): Elaborating entity "mux_a4e" for hierarchy "lpm_mux5:inst2|LPM_MUX:LPM_MUX_component|mux_a4e:auto_generated"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[8]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[9]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[10]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[11]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[12]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[13]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[14]"
+        Warning (14320): Synthesized away node "memory:inst36|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[15]"
+        Warning (14320): Synthesized away node "memory:inst8|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[8]"
+        Warning (14320): Synthesized away node "memory:inst8|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[9]"
+        Warning (14320): Synthesized away node "memory:inst8|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[10]"
+        Warning (14320): Synthesized away node "memory:inst8|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[11]"
+        Warning (14320): Synthesized away node "memory:inst8|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[12]"
+        Warning (14320): Synthesized away node "memory:inst8|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[13]"
+        Warning (14320): Synthesized away node "memory:inst8|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[14]"
+        Warning (14320): Synthesized away node "memory:inst8|lpm_ram_dq:inst2|altram:sram|altsyncram:ram_block|altsyncram_65e1:auto_generated|q_a[15]"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "aluop[3]" is stuck at GND
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 375 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 62 output pins
+    Info (21061): Implemented 285 logic cells
+    Info (21064): Implemented 24 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 4759 megabytes
+    Info: Processing ended: Mon Apr 08 22:36:10 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
+
+
